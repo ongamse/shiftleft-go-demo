@@ -26,7 +26,7 @@ jobs:
     - name: preZero Static Analysis
       run: |
         ${GITHUB_WORKSPACE}/sl --version
-        ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
+        SHIFTLEFT_SBOM_GENERATOR=2 ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app shiftleft-go-demo \
           --tag branch=${{ github.head_ref }} \
           --go --container 18fgsa/s3-resource $(pwd)
