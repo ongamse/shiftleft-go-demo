@@ -27,7 +27,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         SHIFTLEFT_SBOM_GENERATOR=2 ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
-          --app shiftleft-go-demo \
+          --app Qwiet-go-GH \
           --tag branch=${{ github.head_ref }} \
           --go --container 18fgsa/s3-resource $(pwd)
       env:
