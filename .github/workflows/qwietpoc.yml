@@ -27,7 +27,7 @@ jobs:
         #pip install -r requirements.txt
 
         ${GITHUB_WORKSPACE}/sl --version
-        SHIFTLEFT_SBOM_GENERATOR=1 ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
+        ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app Qwiet-go-GH \
           --tag branch=${{ github.head_ref }} \
          
